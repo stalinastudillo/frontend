@@ -1,2 +1,18 @@
 [
+	{
+		"attributeName": "",
+		"controlId": "Q_CLIETNNT_OY67",
+		"controlName": "ClienteQuery",
+		"controlType": "Query",
+		"customEvents": [
+			{
+				"eventName": "executeQuery",
+				"executionType": {
+					"$ref": "../../../../../FCTRC/FRMLR/queries/Q_CLIETNNT_OY67.json#/customEvents"
+				}
+			}
+		],
+		"entityName": "Cliente",
+		"eventsType": "queryEventType"
+	}
 ]

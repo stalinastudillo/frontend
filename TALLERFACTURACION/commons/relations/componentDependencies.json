@@ -13,6 +13,11 @@
 			],
 			"entities": {
 				"EN_CLIENTETX_385": [
+					"AT40_NOMBREUB385",
+					"AT56_TELEFONN385",
+					"AT72_DIRECCIO385",
+					"AT81_APELLIDO385",
+					"AT81_CEDULAYR385"
 				]
 			},
 			"externalEntities": {
@@ -24,6 +29,13 @@
 			"labels": [
 			],
 			"queries": {
+				"Q_CLIETNNT_OY67": [
+					"QM_CLIET6OYNN766_02",
+					"QM_CLIET7TN6T366_04",
+					"QM_CLIET7TYNT189_05",
+					"QM_CLIETNOT77175_01",
+					"QM_CLIETYT6N6637_03"
+				]
 			},
 			"subForms": [
 			]

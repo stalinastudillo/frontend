@@ -8,5 +8,11 @@
 		}
 	],
 	"queries": [
+		{
+			"moduleId": "FCTRC",
+			"queryId": "Q_CLIETNNT_OY67",
+			"related": false,
+			"subModuleId": "FRMLR"
+		}
 	]
 }
