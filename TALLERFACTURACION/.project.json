@@ -1,0 +1,19 @@
+{
+	"culture": "culture",
+	"metadataVersion": "7.2.0.2024 BETA",
+	"moduleId": "FCTRC",
+	"modules": [
+		{
+			"moduleId": "FCTRC",
+			"moduleName": "FACTURACION",
+			"subModules": [
+				{
+					"subModuleId": "FRMLR",
+					"subModuleName": "FORMULARIOS"
+				}
+			]
+		}
+	],
+	"projectName": "TALLERFACTURACION",
+	"subModuleId": "FRMLR"
+}
