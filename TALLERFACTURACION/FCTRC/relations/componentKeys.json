@@ -3,5 +3,21 @@
 		"EN_CLIENTETX_385": {
 			"name": "Cliente"
 		}
+	},
+	"FRMLR": {
+		"CompositeForms": {
+		},
+		"Forms": {
+			"T_FCTRCXQDLAJAJ_918": {
+				"name": "ClienteForm"
+			}
+		},
+		"Queries": {
+			"Q_CLIETNNT_OY67": {
+				"name": "ClienteQuery"
+			}
+		},
+		"SubForms": {
+		}
 	}
 }

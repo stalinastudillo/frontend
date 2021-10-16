@@ -1,0 +1,9 @@
+{
+	"EN_CLIENTETX_385": {
+		"queries": {
+			"Q_CLIETNNT_OY67": {
+				"$ref": "../FRMLR/queries/Q_CLIETNNT_OY67.json#"
+			}
+		}
+	}
+}

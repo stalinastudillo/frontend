@@ -8,7 +8,31 @@
 		}
 	},
 	"Forms": {
+		"T_FCTRCXQDLAJAJ_918": {
+			"blis": [
+			],
+			"entities": {
+				"EN_CLIENTETX_385": [
+				]
+			},
+			"externalEntities": {
+			},
+			"externalQueries": {
+			},
+			"header": [
+			],
+			"labels": [
+			],
+			"queries": {
+			},
+			"subForms": [
+			]
+		}
 	},
 	"Queries": {
+		"Q_CLIETNNT_OY67": {
+			"labels": [
+			]
+		}
 	}
 }
