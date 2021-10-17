@@ -1,6 +1,6 @@
 /*
  * Archivo: T_FCTRCSDYLNTBO_817.java
- * Fecha: 2021-10-17T03:05:13Z
+ * Fecha: 2021-10-17T21:28:48Z
  *
  * Esta aplicacion es parte de los paquetes bancarios propiedad de COBISCORP.
  * Su uso no autorizado queda expresamente prohibido asi como cualquier

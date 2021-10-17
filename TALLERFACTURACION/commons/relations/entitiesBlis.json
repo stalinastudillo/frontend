@@ -14,6 +14,23 @@
 				"returnEntity": [
 				]
 			},
+			"idBli": "BLI7007_bli_actualizar",
+			"nameBli": "BLI_Actualizar"
+		},
+		{
+			"entities": {
+				"inputEntity": [
+					{
+						"entityId": "EN_PRODUCTOO_429",
+						"moduleId": "FCTRC",
+						"related": false
+					}
+				],
+				"outputEntity": [
+				],
+				"returnEntity": [
+				]
+			},
 			"idBli": "BLI7607_bli_crear",
 			"nameBli": "BLI_Crear"
 		}

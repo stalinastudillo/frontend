@@ -288,6 +288,71 @@
 								"componentStyle": null,
 								"customEvents": [
 									{
+										"customEventId": "CEVA_010VA_VABUTTONCLXLLOP_363733_640",
+										"customizationLayer": 0,
+										"customizationLayerDescription": "ECU",
+										"enabled": "T",
+										"eventActions": [
+											{
+												"actionArgs": [
+												],
+												"actionId": "CUSTOM",
+												"actionType": "CUSTOM"
+											}
+										],
+										"executionType": 3,
+										"filter": null,
+										"isEnabled": true,
+										"visualAttributeEventType": {
+											"availableExecutionType": 7,
+											"description": "Permite personalizar la acci\u00f3n a ejecutar de un command o de un ActionControl",
+											"eventId": 10,
+											"name": "ExecuteCommand"
+										}
+									}
+								],
+								"customizationLayer": 0,
+								"customizationLayerDescription": "ECU",
+								"enabled": 4095,
+								"entityQuery": null,
+								"include": 4095,
+								"isCustomized": false,
+								"label": {
+									"defaultValue": {
+										"$ref": "../../../../FCTRC/assets/languages/FCTRC.json#/FCTRC/LBL/LBL_FCTRC_ACTUALIZR_74407"
+									},
+									"labelId": "LBL_FCTRC_ACTUALIZR_74407",
+									"moduleId": "FCTRC"
+								},
+								"maxRecords": null,
+								"name": "VA_VABUTTONCLXLLOP_363733",
+								"options": 0,
+								"order": 6,
+								"queryModule": null,
+								"queryVersion": null,
+								"responsiveLayouts": null,
+								"responsivity": false,
+								"sizeWidthComposite": null,
+								"style": null,
+								"userControl": {
+									"type": "A",
+									"userControlId": "Button"
+								},
+								"visible": 4095,
+								"visualAttributeId": "VA_VABUTTONCLXLLOP_363733",
+								"width": null,
+								"widthComposite": "D"
+							},
+							{
+								"aggregate": null,
+								"aggregateId": null,
+								"attributeValidations": [
+								],
+								"colSpan": 1,
+								"componentInGrid": false,
+								"componentStyle": null,
+								"customEvents": [
+									{
 										"customEventId": "CEVA_010VA_VABUTTONNWFGLOJ_960733_879",
 										"customizationLayer": 0,
 										"customizationLayerDescription": "ECU",

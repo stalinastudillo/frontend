@@ -5,7 +5,7 @@
 		"forms": {
 			"FCTRC": [
 				{
-					"generated": 0,
+					"generated": 4,
 					"moduleId": "FCTRC",
 					"moduleName": "FACTURACION",
 					"name": "Productos",

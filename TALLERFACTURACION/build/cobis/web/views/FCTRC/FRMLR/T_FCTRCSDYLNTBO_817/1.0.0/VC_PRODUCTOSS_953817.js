@@ -276,6 +276,15 @@ function VC_PRODUCTOSS_953817(cobisMainModule) {
                 enabled: designer.constants.mode.All,
                 visible: designer.constants.mode.All
             });
+            $scope.vc.createViewState({
+                id: "VA_VABUTTONCLXLLOP_363733",
+                componentStyle: [],
+                label: "FCTRC.LBL_FCTRC_ACTUALIZR_74407",
+                validationCode: 0,
+                readOnly: designer.constants.mode.None,
+                enabled: designer.constants.mode.All,
+                visible: designer.constants.mode.All
+            });
             //ViewState - Command: Accept
             $scope.vc.createViewState({
                 id: "T_FCTRCSDYLNTBO_817_ACCEPT",
