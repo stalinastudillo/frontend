@@ -1,0 +1,118 @@
+{
+	"databaseType": "Sybase",
+	"inputEntity": [
+	],
+	"inputParameters": [
+		{
+			"attributeId": "",
+			"bddType": "int",
+			"dataType": "INT",
+			"direction": "in",
+			"entityId": "",
+			"format": "",
+			"name": "@t_trn",
+			"type": "CONSTANT",
+			"value": "163030126"
+		},
+		{
+			"attributeId": "",
+			"bddType": "char",
+			"dataType": "CHAR",
+			"direction": "in",
+			"entityId": "",
+			"format": "",
+			"name": "@i_operacion",
+			"type": "CONSTANT",
+			"value": "R"
+		}
+	],
+	"name": "BLI_Obtener_Clientes",
+	"outputEntity": [
+	],
+	"outputParameters": [
+	],
+	"patternId": "BLI4116_bli_obtener_clientes",
+	"patternName": "BLI_Obtener_Clientes",
+	"patternType": "Bli",
+	"queries": [
+		{
+			"_idQuery": "ef0d60c6-7b36-4b4a-a822-fc5825c83987",
+			"isMapReturn": true,
+			"isReturn": true,
+			"isSingleResult": false,
+			"numberQuery": 1,
+			"queryName": "SELECT\r\n\t\t\tcl_codigo,\r\n\t\t\tcl_cedula,\r\n\t\t\tcl_nombre,\r\n\t\t\tcl_apellido,\r\n\t\t\tcl_direccion,\r\n\t\t\tcl_telefono\r\n\tFROM"
+		}
+	],
+	"resultSets": [
+		{
+			"_idQuery": "ef0d60c6-7b36-4b4a-a822-fc5825c83987",
+			"columns": [
+				{
+					"attributeId": "AT25_CODIGOUO385",
+					"entityId": "EN_CLIENTETX_385",
+					"format": "",
+					"name": "{0}",
+					"position": 1,
+					"type": "ATTRIBUTE"
+				},
+				{
+					"attributeId": "AT81_CEDULAYR385",
+					"entityId": "EN_CLIENTETX_385",
+					"format": "",
+					"name": "{1}",
+					"position": 2,
+					"type": "ATTRIBUTE"
+				},
+				{
+					"attributeId": "AT40_NOMBREUB385",
+					"entityId": "EN_CLIENTETX_385",
+					"format": "",
+					"name": "{2}",
+					"position": 3,
+					"type": "ATTRIBUTE"
+				},
+				{
+					"attributeId": "AT81_APELLIDO385",
+					"entityId": "EN_CLIENTETX_385",
+					"format": "",
+					"name": "{3}",
+					"position": 4,
+					"type": "ATTRIBUTE"
+				},
+				{
+					"attributeId": "AT72_DIRECCIO385",
+					"entityId": "EN_CLIENTETX_385",
+					"format": "",
+					"name": "{4}",
+					"position": 5,
+					"type": "ATTRIBUTE"
+				},
+				{
+					"attributeId": "AT56_TELEFONN385",
+					"entityId": "EN_CLIENTETX_385",
+					"format": "",
+					"name": "{5}",
+					"position": 6,
+					"type": "ATTRIBUTE"
+				}
+			],
+			"number": 1,
+			"singleResult": false
+		}
+	],
+	"returnEntity": [
+		{
+			"entityId": "EN_CLIENTETX_385",
+			"module": {
+				"moduleId": "FCTRC",
+				"moduleName": "FACTURACION"
+			},
+			"name": "Cliente"
+		}
+	],
+	"serverName": "CENTRAL",
+	"serviceID": "cobis.eva_ecg_cliente",
+	"type": "SP",
+	"typeMapping": "MAPJava"
+}
