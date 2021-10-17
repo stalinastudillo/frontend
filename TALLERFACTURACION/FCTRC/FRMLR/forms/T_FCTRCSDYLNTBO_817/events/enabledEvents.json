@@ -1,0 +1,16 @@
+[
+	{
+		"attributeName": "",
+		"controlId": "VA_VABUTTONNWFGLOJ_960733",
+		"controlName": "VA_VABUTTONNWFGLOJ_960733",
+		"controlType": "Button",
+		"customEvents": [
+			{
+				"eventName": "executeCommand",
+				"executionType": 3
+			}
+		],
+		"entityName": "Producto",
+		"eventsType": "visualAttributeEventType"
+	}
+]

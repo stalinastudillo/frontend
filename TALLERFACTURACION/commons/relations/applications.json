@@ -1,0 +1,34 @@
+{
+	"APP_GRUPOCRERAA_491": {
+		"externalModules": {
+		},
+		"forms": {
+			"FCTRC": [
+				{
+					"generated": 0,
+					"moduleId": "FCTRC",
+					"moduleName": "FACTURACION",
+					"name": "Productos",
+					"subModuleId": "FRMLR",
+					"subModuleName": "FORMULARIOS",
+					"taskId": "T_FCTRCSDYLNTBO_817",
+					"type": "Simple form"
+				}
+			]
+		},
+		"generate": {
+			"categoryName": "Cobiscorp",
+			"customEventImpl": "Custom",
+			"customEventImplPath": "{projectPath}\\build",
+			"displayName": "GrupoCrear",
+			"mode": "Development",
+			"type": "HTML5"
+		},
+		"id": "APP_GRUPOCRERAA_491",
+		"mainPortletTaskId": "T_FCTRCSDYLNTBO_817",
+		"modules": [
+			"FCTRC"
+		],
+		"name": "GrupoCrear"
+	}
+}

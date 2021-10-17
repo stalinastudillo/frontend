@@ -1,6 +1,43 @@
 {
-	"Entities": {},
-	"Forms": {},
-	"CompositeForms": {},
-	"Queries": {}
+	"CompositeForms": {
+	},
+	"Entities": {
+		"EN_PRODUCTOO_429": {
+			"labels": [
+			]
+		}
+	},
+	"Forms": {
+		"T_FCTRCSDYLNTBO_817": {
+			"blis": [
+			],
+			"entities": {
+				"EN_PRODUCTOO_429": [
+					"AT34_MONEDAFD429",
+					"AT68_NOMBREUC429",
+					"AT76_PRECIOXA429",
+					"AT82_CODIGOWK429"
+				]
+			},
+			"externalEntities": {
+			},
+			"externalQueries": {
+			},
+			"header": [
+			],
+			"labels": [
+				"LBL_FCTRC_CODIGONLV_11371",
+				"LBL_FCTRC_GUARDARMR_83234",
+				"LBL_FCTRC_MONEDACEU_24193",
+				"LBL_FCTRC_NOMBREVCL_60621",
+				"LBL_FCTRC_PRECIOOEQ_44349"
+			],
+			"queries": {
+			},
+			"subForms": [
+			]
+		}
+	},
+	"Queries": {
+	}
 }

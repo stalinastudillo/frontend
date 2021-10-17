@@ -1,0 +1,20 @@
+{
+	"Entities": {
+		"EN_PRODUCTOO_429": {
+			"name": "Producto"
+		}
+	},
+	"FRMLR": {
+		"CompositeForms": {
+		},
+		"Forms": {
+			"T_FCTRCSDYLNTBO_817": {
+				"name": "Productos"
+			}
+		},
+		"Queries": {
+		},
+		"SubForms": {
+		}
+	}
+}
