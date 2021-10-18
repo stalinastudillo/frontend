@@ -1,2 +1,32 @@
 {
+	"APP_CLIENTESNUC_923": {
+		"externalModules": {
+		},
+		"forms": {
+			"FCTRC": [
+				{
+					"generated": 4,
+					"moduleId": "FCTRC",
+					"name": "ClienteForm",
+					"subModuleId": "FRMLR",
+					"taskId": "T_FCTRCXQDLAJAJ_918",
+					"type": "Simple form"
+				}
+			]
+		},
+		"generate": {
+			"categoryName": "Cobiscorp",
+			"customEventImpl": "Custom",
+			"customEventImplPath": "{projectPath}\\build",
+			"displayName": "ClienteForms",
+			"mode": "Development",
+			"type": "HTML5"
+		},
+		"id": "APP_CLIENTESNUC_923",
+		"mainPortletTaskId": "T_FCTRCXQDLAJAJ_918",
+		"modules": [
+			"FCTRC"
+		],
+		"name": "ClienteForms"
+	}
 }
