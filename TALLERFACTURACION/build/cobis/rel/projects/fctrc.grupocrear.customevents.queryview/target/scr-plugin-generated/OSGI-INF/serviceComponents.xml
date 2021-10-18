@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component enabled="true" name="com.cobiscorp.cobis.fctrc.customevents.queryview.CEQV_204QV_QI85_UBK50_737_QueryViewEvent">
+        <implementation class="com.cobiscorp.cobis.fctrc.customevents.queryview.CEQV_204QV_QI85_UBK50_737_QueryViewEvent"/>
+        <service servicefactory="false">
+            <provide interface="com.cobiscorp.designer.api.builder.QueryViewEventBuilder"/>
+        </service>
+        <property name="queryView.id" type="String" value="QV_QI85_UBK50"/>
+        <property name="service.pid" value="com.cobiscorp.cobis.fctrc.customevents.queryview.CEQV_204QV_QI85_UBK50_737_QueryViewEvent"/>
+        <reference name="iGridRowDeletingQV_QI85_UBK50" interface="com.cobiscorp.designer.api.customization.IGridRowDeleting" cardinality="1..1" policy="dynamic" target="(&amp;(queryView.id=QV_QI85_UBK50)(queryView.controlId=QV_QI85_UBK50))" bind="setiGridRowDeletingQV_QI85_UBK50" unbind="unsetiGridRowDeletingQV_QI85_UBK50"/>
+    </scr:component>
+</components>
