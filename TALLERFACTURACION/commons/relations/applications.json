@@ -7,16 +7,20 @@
 				{
 					"generated": 4,
 					"moduleId": "FCTRC",
+					"moduleName": "FACTURACION",
 					"name": "Productos",
 					"subModuleId": "FRMLR",
+					"subModuleName": "FORMULARIOS",
 					"taskId": "T_FCTRCSDYLNTBO_817",
 					"type": "Simple form"
 				},
 				{
 					"generated": 4,
 					"moduleId": "FCTRC",
+					"moduleName": "FACTURACION",
 					"name": "MostrarProductos",
 					"subModuleId": "FRMLR",
+					"subModuleName": "FORMULARIOS",
 					"taskId": "T_FCTRCVYEYWCJM_592",
 					"type": "Simple form"
 				}

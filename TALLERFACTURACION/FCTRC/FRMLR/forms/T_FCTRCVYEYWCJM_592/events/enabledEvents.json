@@ -14,5 +14,33 @@
 		],
 		"entityName": "Producto",
 		"eventsType": "queryEventType"
+	},
+	{
+		"attributeName": "",
+		"controlId": "QV_QI85_UBK50",
+		"controlName": "QV_QI85_UBK50",
+		"controlType": "",
+		"customEvents": [
+			{
+				"eventName": "rowDeleting",
+				"executionType": 3
+			}
+		],
+		"entityName": "Producto",
+		"eventsType": "queryViewEventType"
+	},
+	{
+		"attributeName": "",
+		"controlId": "VC_MOSTRARPOC_134592",
+		"controlName": "",
+		"controlType": "",
+		"customEvents": [
+			{
+				"eventName": "onCloseModal",
+				"executionType": 1
+			}
+		],
+		"entityName": "",
+		"eventsType": "viewContainerEventType"
 	}
 ]

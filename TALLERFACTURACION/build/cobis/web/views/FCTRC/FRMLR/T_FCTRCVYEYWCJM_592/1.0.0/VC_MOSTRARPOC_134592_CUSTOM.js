@@ -36,6 +36,31 @@ task.executeQuery.Q_PRODTUUT_UU85 = function(executeQueryEventArgs){
     //executeQueryEventArgs.commons.serverParameters.Producto = true;
 };
 
+	
+    
+//Evento onCloseModalEvent : Evento que actua como listener cuando se cierra ventanas modales.
+//ViewContainer: MostrarProductos
+task.onCloseModalEvent = function (entities, onCloseModalEventArgs){
+
+    onCloseModalEventArgs.commons.execServer = false;
+    onCloseModalEventArgs.commons.api.grid.refresh('QV_QI85_UBK50');
+};
+
+	
+//gridRowDeleting QueryView: QV_QI85_UBK50
+//Se ejecuta antes de que los datos eliminados en una grilla sean comprometidos.
+task.gridRowDeleting.QV_QI85_UBK50 = function (entities,gridRowDeletingEventArgs) {
+
+     gridRowDeletingEventArgs.commons.execServer = true;
+     //gridRowDeletingEventArgs.commons.serverParameters.Producto = true;
+
+};
+
+
+
+
+
+
 
 
 }));

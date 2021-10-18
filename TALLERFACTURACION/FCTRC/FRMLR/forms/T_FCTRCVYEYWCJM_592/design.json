@@ -33,6 +33,23 @@
 			"columnsNum": 1,
 			"componentStyle": null,
 			"customEvents": [
+				{
+					"customEventId": "CEVC_501T_FCTRCVYEYWCJM_592_386",
+					"customizationLayer": 0,
+					"customizationLayerDescription": "ECU",
+					"enabled": "T",
+					"eventActions": [
+					],
+					"executionType": 1,
+					"filter": null,
+					"isEnabled": true,
+					"viewContainerEventType": {
+						"availableExecutionType": 7,
+						"description": "Evento que actua como listener cuando se cierra ventanas modales.",
+						"eventId": 501,
+						"name": "onCloseModal"
+					}
+				}
 			],
 			"customizationLayer": 0,
 			"customizationLayerDescription": "ECU",
@@ -82,7 +99,7 @@
 							"allowPagingStr": "F",
 							"allowSorting": false,
 							"allowSortingStr": "F",
-							"autoSync": null,
+							"autoSync": false,
 							"componentStyle": null,
 							"confirmRowDeletion": false,
 							"confirmRowDeletionStr": "F",
@@ -93,10 +110,10 @@
 							"customUrlDialog": null,
 							"deleteCommandEnabled": true,
 							"deleteCommandEnabledStr": "T",
-							"dialogTitleLabelId": null,
+							"dialogTitleLabelId": "LBL_FCTRC_GUARDARMR_83234",
 							"editCommandEnabled": true,
 							"editCommandEnabledStr": "T",
-							"editMode": "0",
+							"editMode": "3",
 							"entityName": {
 								"$ref": "../../../../FCTRC/entities/EN_PRODUCTOO_429.json#/name"
 							},
@@ -112,9 +129,9 @@
 							"insertCommandEnabled": true,
 							"insertCommandEnabledStr": "T",
 							"isCustomized": false,
-							"modalSize": null,
+							"modalSize": "md",
 							"modeSelection": "None",
-							"moduleIdDialog": null,
+							"moduleIdDialog": "FCTRC",
 							"multiSelectEnabledStr": "F",
 							"name": "QV_QI85_UBK50",
 							"options": 0,
@@ -122,16 +139,57 @@
 							"query": {
 								"$ref": "../../../../FCTRC/FRMLR/queries/Q_PRODTUUT_UU85.json#"
 							},
+							"queryId": "Q_PRODTUUT_UU85",
+							"queryVersion": "1.0.0",
 							"queryViewCustomActions": [
+								{
+									"action": null,
+									"commandImageId": null,
+									"commandName": "RowDeleting",
+									"commandOrder": null,
+									"commandType": 0,
+									"customActionId": "CEQV_204QV_QI85_UBK50_737",
+									"customizationLayer": 0,
+									"customizationLayerDescription": "ECU",
+									"enabled": "T",
+									"eventActions": [
+										{
+											"actionArgs": [
+											],
+											"actionId": "CUSTOM",
+											"actionType": "CUSTOM"
+										}
+									],
+									"executionType": 3,
+									"filter": null,
+									"isCustomized": false,
+									"name": "RowDeleting",
+									"options": 0,
+									"queryView": "QV_QI85_UBK50",
+									"queryViewEventType": {
+										"availableExecutionType": 7,
+										"description": "Se ejecuta antes de que los datos eliminados en una grilla sean comprometidos.",
+										"eventId": 204,
+										"name": "RowDeleting"
+									},
+									"serviceName": null,
+									"userControl": {
+										"customizationLayer": "0",
+										"customizationLayerDescription": "ECU",
+										"description": "Designer Button",
+										"type": "A",
+										"userControlId": "Button"
+									}
+								}
 							],
 							"queryViewId": "QV_QI85_UBK50",
 							"queryViewType": "Grid",
 							"rowCommandAppearance": 0,
 							"style": null,
-							"subModuleIdDialog": null,
-							"taskIdDialog": "1.0.0",
-							"taskVersionDialog": null,
-							"typeFormDialog": null,
+							"subModuleIdDialog": "FRMLR",
+							"taskIdDialog": "T_FCTRCSDYLNTBO_817",
+							"taskVersionDialog": "1.0.0",
+							"typeFormDialog": "forms",
 							"userControl": {
 								"customizationLayer": 0,
 								"customizationLayerDescription": "ECU",
@@ -140,7 +198,7 @@
 								"type": "I",
 								"userControlId": "Grid"
 							},
-							"viewContainerIdDialog": null
+							"viewContainerIdDialog": "VC_PRODUCTOSS_953817"
 						},
 						"queryViewId": "QV_QI85_UBK50",
 						"responsiveLayouts": null,

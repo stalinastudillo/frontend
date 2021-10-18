@@ -46,7 +46,7 @@ function VC_PRODUCTOSS_953817(cobisMainModule) {
         if (!$scope.vc.loaded) {
             var page = {
                 hasTemporaryDataSupport: false,
-                hasInitDataSupport: false,
+                hasInitDataSupport: true,
                 hasChangeInitDataSupport: false,
                 hasSearchRenderEvent: false,
                 ejecTemporaryData: false,

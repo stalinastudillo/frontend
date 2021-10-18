@@ -1,6 +1,6 @@
 /*
  * Archivo: Q_PRODTUUT_UU85_QueryEvent.java
- * Fecha: 17/10/2021 17:37:23
+ * Fecha: 17/10/2021 20:18:36
  *
  * Esta aplicacion es parte de los paquetes bancarios propiedad de COBISCORP.
  * Su uso no autorizado queda expresamente prohibido asi como cualquier
