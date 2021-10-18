@@ -1,6 +1,6 @@
 /*
  * Archivo: T_FCTRCXQDLAJAJ_918.java
- * Fecha: 2021-10-18T06:01:23Z
+ * Fecha: 2021-10-18T16:11:33Z
  *
  * Esta aplicacion es parte de los paquetes bancarios propiedad de COBISCORP.
  * Su uso no autorizado queda expresamente prohibido asi como cualquier

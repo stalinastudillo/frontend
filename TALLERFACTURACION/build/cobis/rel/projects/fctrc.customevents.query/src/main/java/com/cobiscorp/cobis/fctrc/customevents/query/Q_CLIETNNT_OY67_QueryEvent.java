@@ -1,6 +1,6 @@
 /*
  * Archivo: Q_CLIETNNT_OY67_QueryEvent.java
- * Fecha: 18/10/2021 1:01:24
+ * Fecha: 18/10/2021 11:11:33
  *
  * Esta aplicacion es parte de los paquetes bancarios propiedad de COBISCORP.
  * Su uso no autorizado queda expresamente prohibido asi como cualquier

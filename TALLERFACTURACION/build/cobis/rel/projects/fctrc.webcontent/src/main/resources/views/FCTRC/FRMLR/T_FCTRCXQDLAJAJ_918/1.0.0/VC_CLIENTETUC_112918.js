@@ -317,15 +317,54 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                     create: function(options) {
                         var model = options.data;
                         model.dsgnrId = designer.utils.uuid();
-                        options.success(model);
+                        //this block of code only appears if the grid has set a RowInsertingEvent
+                        var args = {
+                            rowData: model,
+                            nameEntityGrid: 'Cliente',
+                            cancel: false
+                        }
+                        $scope.vc.gridRowAction('QV_RL67_UZN75', $scope.vc.designerEventsConstants.GridRowInserting, args, function() {
+                            if (!args.cancel) {
+                                options.success(args.rowData);
+                            } else {
+                                options.error(args.rowData);
+                            }
+                        });
+                        // end block
                     },
                     update: function(options) {
                         var model = options.data;
-                        options.success(model);
+                        //this block of code only appears if the grid has set a RowUpdatingEvent
+                        var args = {
+                            rowData: model,
+                            nameEntityGrid: 'Cliente',
+                            cancel: false
+                        }
+                        $scope.vc.gridRowAction('QV_RL67_UZN75', $scope.vc.designerEventsConstants.GridRowUpdating, args, function() {
+                            if (!args.cancel) {
+                                options.success(args.rowData);
+                            } else {
+                                options.error(args.rowData);
+                            }
+                        });
+                        // end block
                     },
                     destroy: function(options) {
                         var model = options.data;
-                        options.success(model);
+                        //this block of code only appears if the grid has set a RowDeletingEvent
+                        var args = {
+                            rowData: model,
+                            nameEntityGrid: 'Cliente',
+                            cancel: false
+                        }
+                        $scope.vc.gridRowAction('QV_RL67_UZN75', $scope.vc.designerEventsConstants.GridRowDeleting, args, function() {
+                            if (!args.cancel) {
+                                options.success(args.rowData);
+                            } else {
+                                options.error(new Error('DeletingError'));
+                            }
+                        });
+                        // end block
                     }
                 },
                 schema: {

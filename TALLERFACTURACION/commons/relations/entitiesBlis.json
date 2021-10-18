@@ -31,6 +31,40 @@
 				"returnEntity": [
 				]
 			},
+			"idBli": "BLI7140_bli_eliminar_cliente",
+			"nameBli": "BLI_Eliminar_Cliente"
+		},
+		{
+			"entities": {
+				"inputEntity": [
+					{
+						"entityId": "EN_CLIENTETX_385",
+						"moduleId": "FCTRC",
+						"related": false
+					}
+				],
+				"outputEntity": [
+				],
+				"returnEntity": [
+				]
+			},
+			"idBli": "BLI7962_bli_actualizar_cliente",
+			"nameBli": "BLI_Actualizar_Cliente"
+		},
+		{
+			"entities": {
+				"inputEntity": [
+					{
+						"entityId": "EN_CLIENTETX_385",
+						"moduleId": "FCTRC",
+						"related": false
+					}
+				],
+				"outputEntity": [
+				],
+				"returnEntity": [
+				]
+			},
 			"idBli": "BLI9087_bli_crear_cliente",
 			"nameBli": "BLI_Crear_Cliente"
 		}
