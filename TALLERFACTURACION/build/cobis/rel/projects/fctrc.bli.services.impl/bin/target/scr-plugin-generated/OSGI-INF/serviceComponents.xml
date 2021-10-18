@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component enabled="true" name="com.cobiscorp.cobis.fctrc.bli.services.impl.BLI7007_bli_actualizar">
+        <implementation class="com.cobiscorp.cobis.fctrc.bli.services.impl.BLI7007_bli_actualizar"/>
+        <service servicefactory="false">
+            <provide interface="com.cobiscorp.designer.bli.api.IBLIExecutor"/>
+        </service>
+        <property name="task.module" type="String" value="FCTRC"/>
+        <property name="bli.id" type="String" value="BLI7007_bli_actualizar"/>
+        <property name="service.pid" value="com.cobiscorp.cobis.fctrc.bli.services.impl.BLI7007_bli_actualizar"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.cobiscorp.cobis.fctrc.bli.services.impl.BLI7607_bli_crear">
+        <implementation class="com.cobiscorp.cobis.fctrc.bli.services.impl.BLI7607_bli_crear"/>
+        <service servicefactory="false">
+            <provide interface="com.cobiscorp.designer.bli.api.IBLIExecutor"/>
+        </service>
+        <property name="task.module" type="String" value="FCTRC"/>
+        <property name="bli.id" type="String" value="BLI7607_bli_crear"/>
+        <property name="service.pid" value="com.cobiscorp.cobis.fctrc.bli.services.impl.BLI7607_bli_crear"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.cobiscorp.cobis.fctrc.bli.services.impl.BLI9785_bli_productos">
+        <implementation class="com.cobiscorp.cobis.fctrc.bli.services.impl.BLI9785_bli_productos"/>
+        <service servicefactory="false">
+            <provide interface="com.cobiscorp.designer.bli.api.IBLIExecutor"/>
+        </service>
+        <property name="task.module" type="String" value="FCTRC"/>
+        <property name="bli.id" type="String" value="BLI9785_bli_productos"/>
+        <property name="service.pid" value="com.cobiscorp.cobis.fctrc.bli.services.impl.BLI9785_bli_productos"/>
+    </scr:component>
+</components>

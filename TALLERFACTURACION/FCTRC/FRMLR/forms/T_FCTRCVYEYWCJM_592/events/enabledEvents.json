@@ -1,0 +1,18 @@
+[
+	{
+		"attributeName": "",
+		"controlId": "Q_PRODTUUT_UU85",
+		"controlName": "ProductoQuery",
+		"controlType": "Query",
+		"customEvents": [
+			{
+				"eventName": "executeQuery",
+				"executionType": {
+					"$ref": "../../../../../FCTRC/FRMLR/queries/Q_PRODTUUT_UU85.json#/customEvents"
+				}
+			}
+		],
+		"entityName": "Producto",
+		"eventsType": "queryEventType"
+	}
+]

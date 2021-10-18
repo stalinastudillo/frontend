@@ -10,9 +10,15 @@
 		"Forms": {
 			"T_FCTRCSDYLNTBO_817": {
 				"name": "Productos"
+			},
+			"T_FCTRCVYEYWCJM_592": {
+				"name": "MostrarProductos"
 			}
 		},
 		"Queries": {
+			"Q_PRODTUUT_UU85": {
+				"name": "ProductoQuery"
+			}
 		},
 		"SubForms": {
 		}

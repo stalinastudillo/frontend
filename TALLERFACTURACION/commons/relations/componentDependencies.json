@@ -37,8 +37,42 @@
 			},
 			"subForms": [
 			]
+		},
+		"T_FCTRCVYEYWCJM_592": {
+			"blis": [
+			],
+			"entities": {
+				"EN_PRODUCTOO_429": [
+					"AT34_MONEDAFD429",
+					"AT68_NOMBREUC429",
+					"AT76_PRECIOXA429",
+					"AT82_CODIGOWK429"
+				]
+			},
+			"externalEntities": {
+			},
+			"externalQueries": {
+			},
+			"header": [
+			],
+			"labels": [
+			],
+			"queries": {
+				"Q_PRODTUUT_UU85": [
+					"QM_PRODTU5TUT416_02",
+					"QM_PRODTU8UUU202_01",
+					"QM_PRODTUTUUT913_04",
+					"QM_PRODTUUTUU105_03"
+				]
+			},
+			"subForms": [
+			]
 		}
 	},
 	"Queries": {
+		"Q_PRODTUUT_UU85": {
+			"labels": [
+			]
+		}
 	}
 }

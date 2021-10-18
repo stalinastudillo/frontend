@@ -1,6 +1,6 @@
 /*
  * Archivo: VW_PRODUCTOSS_733_ViewEvent.java
- * Fecha: 17/10/2021 16:28:48
+ * Fecha: 17/10/2021 17:37:45
  *
  * Esta aplicacion es parte de los paquetes bancarios propiedad de COBISCORP.
  * Su uso no autorizado queda expresamente prohibido asi como cualquier

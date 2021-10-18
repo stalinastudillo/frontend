@@ -96,7 +96,7 @@
 					"Precio",
 					"Moneda"
 				],
-				"editMode": true,
+				"editMode": false,
 				"queryText": "select\r\n\t\t\u0027Secuencial\u0027\t= pr_secuencial,\r\n\t\t\u0027Codigo\u0027 \t\t= pr_codigo,\r\n\t\t\u0027Nombre\u0027\t\t= pr_nombre,\r\n\t\t\u0027Precio\u0027 \t\t= pr_precio,\r\n\t\t\u0027Moneda\u0027\t\t= pr_moneda\r\n\t\tfrom"
 			}
 		],

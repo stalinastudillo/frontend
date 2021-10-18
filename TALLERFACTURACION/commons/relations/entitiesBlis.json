@@ -33,6 +33,23 @@
 			},
 			"idBli": "BLI7607_bli_crear",
 			"nameBli": "BLI_Crear"
+		},
+		{
+			"entities": {
+				"inputEntity": [
+				],
+				"outputEntity": [
+				],
+				"returnEntity": [
+					{
+						"entityId": "EN_PRODUCTOO_429",
+						"moduleId": "FCTRC",
+						"related": false
+					}
+				]
+			},
+			"idBli": "BLI9785_bli_productos",
+			"nameBli": "BLI_Productos"
 		}
 	]
 }
