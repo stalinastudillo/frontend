@@ -1,0 +1,9 @@
+{
+	"EN_PRODUCTOO_429": {
+		"queries": {
+			"Q_PRODTUUT_UU85": {
+				"$ref": "../FRMLR/queries/Q_PRODTUUT_UU85.json#"
+			}
+		}
+	}
+}

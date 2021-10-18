@@ -1,0 +1,102 @@
+{
+	"databaseType": "Sybase",
+	"inputEntity": [
+	],
+	"inputParameters": [
+		{
+			"attributeId": "",
+			"bddType": "int",
+			"dataType": "INT",
+			"direction": "in",
+			"entityId": "",
+			"format": "",
+			"name": "@t_trn",
+			"type": "CONSTANT",
+			"value": "163030123"
+		},
+		{
+			"attributeId": "",
+			"bddType": "char",
+			"dataType": "CHAR",
+			"direction": "in",
+			"entityId": "",
+			"format": "",
+			"name": "@i_operacion",
+			"type": "CONSTANT",
+			"value": "S"
+		}
+	],
+	"name": "BLI_Productos",
+	"outputEntity": [
+	],
+	"outputParameters": [
+	],
+	"patternId": "BLI9785_bli_productos",
+	"patternName": "BLI_Productos",
+	"patternType": "Bli",
+	"queries": [
+		{
+			"_idQuery": "17e6ec3c-e93b-495e-8c28-32a12608e187",
+			"isMapReturn": true,
+			"isReturn": true,
+			"isSingleResult": false,
+			"numberQuery": 1,
+			"queryName": "select\r\n\t\t\u0027Secuencial\u0027\t= pr_secuencial,\r\n\t\t\u0027Codigo\u0027 \t\t= pr_codigo,\r\n\t\t\u0027Nombre\u0027\t\t= pr_nombre,\r\n\t\t\u0027Precio\u0027 \t\t= pr_precio,\r\n\t\t\u0027Moneda\u0027\t\t= pr_moneda\r\n\t\tfrom"
+		}
+	],
+	"resultSets": [
+		{
+			"_idQuery": "17e6ec3c-e93b-495e-8c28-32a12608e187",
+			"columns": [
+				{
+					"attributeId": "AT82_CODIGOWK429",
+					"entityId": "EN_PRODUCTOO_429",
+					"format": "",
+					"name": "Codigo",
+					"position": 2,
+					"type": "ATTRIBUTE"
+				},
+				{
+					"attributeId": "AT68_NOMBREUC429",
+					"entityId": "EN_PRODUCTOO_429",
+					"format": "",
+					"name": "Nombre",
+					"position": 3,
+					"type": "ATTRIBUTE"
+				},
+				{
+					"attributeId": "AT76_PRECIOXA429",
+					"entityId": "EN_PRODUCTOO_429",
+					"format": "",
+					"name": "Precio",
+					"position": 4,
+					"type": "ATTRIBUTE"
+				},
+				{
+					"attributeId": "AT34_MONEDAFD429",
+					"entityId": "EN_PRODUCTOO_429",
+					"format": "",
+					"name": "Moneda",
+					"position": 5,
+					"type": "ATTRIBUTE"
+				}
+			],
+			"number": 1,
+			"singleResult": false
+		}
+	],
+	"returnEntity": [
+		{
+			"entityId": "EN_PRODUCTOO_429",
+			"module": {
+				"moduleId": "FCTRC",
+				"moduleName": "FACTURACION"
+			},
+			"name": "Producto"
+		}
+	],
+	"serverName": "CENTRAL",
+	"serviceID": "cobis.taller_factura",
+	"type": "SP",
+	"typeMapping": "MAPJava"
+}

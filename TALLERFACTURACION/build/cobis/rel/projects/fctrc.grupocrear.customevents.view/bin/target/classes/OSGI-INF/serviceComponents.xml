@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component enabled="true" name="com.cobiscorp.cobis.fctrc.customevents.view.CEVA_010VA_VABUTTONCLXLLOP_363733_640_ViewEvent">
+        <implementation class="com.cobiscorp.cobis.fctrc.customevents.view.CEVA_010VA_VABUTTONCLXLLOP_363733_640_ViewEvent"/>
+        <service servicefactory="false">
+            <provide interface="com.cobiscorp.designer.api.builder.ViewEventBuilder"/>
+        </service>
+        <property name="view.id" type="String" value="VW_PRODUCTOSS_733"/>
+        <property name="view.version" type="String" value="1.0.0"/>
+        <property name="service.pid" value="com.cobiscorp.cobis.fctrc.customevents.view.CEVA_010VA_VABUTTONCLXLLOP_363733_640_ViewEvent"/>
+        <reference name="iExecuteCommandVA_VABUTTONCLXLLOP_363733" interface="com.cobiscorp.designer.api.customization.IExecuteCommand" cardinality="1..1" policy="dynamic" target="(&amp;(view.id=VW_PRODUCTOSS_733)(view.version=1.0.0)(view.controlId=VA_VABUTTONCLXLLOP_363733))" bind="setiExecuteCommandVA_VABUTTONCLXLLOP_363733" unbind="unsetiExecuteCommandVA_VABUTTONCLXLLOP_363733"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.cobiscorp.cobis.fctrc.customevents.view.CEVA_010VA_VABUTTONNWFGLOJ_960733_879_ViewEvent">
+        <implementation class="com.cobiscorp.cobis.fctrc.customevents.view.CEVA_010VA_VABUTTONNWFGLOJ_960733_879_ViewEvent"/>
+        <service servicefactory="false">
+            <provide interface="com.cobiscorp.designer.api.builder.ViewEventBuilder"/>
+        </service>
+        <property name="view.id" type="String" value="VW_PRODUCTOSS_733"/>
+        <property name="view.version" type="String" value="1.0.0"/>
+        <property name="service.pid" value="com.cobiscorp.cobis.fctrc.customevents.view.CEVA_010VA_VABUTTONNWFGLOJ_960733_879_ViewEvent"/>
+        <reference name="iExecuteCommandVA_VABUTTONNWFGLOJ_960733" interface="com.cobiscorp.designer.api.customization.IExecuteCommand" cardinality="1..1" policy="dynamic" target="(&amp;(view.id=VW_PRODUCTOSS_733)(view.version=1.0.0)(view.controlId=VA_VABUTTONNWFGLOJ_960733))" bind="setiExecuteCommandVA_VABUTTONNWFGLOJ_960733" unbind="unsetiExecuteCommandVA_VABUTTONNWFGLOJ_960733"/>
+    </scr:component>
+</components>

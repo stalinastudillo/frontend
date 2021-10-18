@@ -1,0 +1,122 @@
+{
+	"filename": "C:\\Semillero\\sps\\Sp\\taller_factura.sql",
+	"procedure": {
+		"database": "cobis",
+		"name": "taller_factura",
+		"owner": "dbo",
+		"parameters": [
+			{
+				"dataType": "varchar",
+				"direction": "in",
+				"name": "@s_srv"
+			},
+			{
+				"dataType": "int",
+				"direction": "in",
+				"name": "@s_ssn"
+			},
+			{
+				"dataType": "datetime",
+				"direction": "in",
+				"name": "@s_date"
+			},
+			{
+				"dataType": "smallint",
+				"direction": "in",
+				"name": "@s_ofi"
+			},
+			{
+				"dataType": "varchar",
+				"direction": "in",
+				"name": "@s_user"
+			},
+			{
+				"dataType": "smallint",
+				"direction": "in",
+				"name": "@s_rol"
+			},
+			{
+				"dataType": "varchar",
+				"direction": "in",
+				"name": "@s_term"
+			},
+			{
+				"dataType": "varchar",
+				"direction": "in",
+				"name": "@t_file"
+			},
+			{
+				"dataType": "int",
+				"direction": "in",
+				"name": "@t_trn"
+			},
+			{
+				"dataType": "char",
+				"direction": "in",
+				"name": "@t_debug"
+			},
+			{
+				"dataType": "varchar",
+				"direction": "in",
+				"name": "@t_from"
+			},
+			{
+				"dataType": "char",
+				"direction": "in",
+				"name": "@i_operacion"
+			},
+			{
+				"dataType": "varchar",
+				"direction": "in",
+				"name": "@i_codigo"
+			},
+			{
+				"dataType": "varchar",
+				"direction": "in",
+				"name": "@i_nombre"
+			},
+			{
+				"dataType": "money",
+				"direction": "in",
+				"name": "@i_precio"
+			},
+			{
+				"dataType": "char",
+				"direction": "in",
+				"name": "@i_moneda"
+			}
+		],
+		"queries": [
+			{
+				"_idQuery": "17e6ec3c-e93b-495e-8c28-32a12608e187",
+				"columns": [
+					"Secuencial",
+					"Codigo",
+					"Nombre",
+					"Precio",
+					"Moneda"
+				],
+				"editMode": true,
+				"queryText": "select\r\n\t\t\u0027Secuencial\u0027\t= pr_secuencial,\r\n\t\t\u0027Codigo\u0027 \t\t= pr_codigo,\r\n\t\t\u0027Nombre\u0027\t\t= pr_nombre,\r\n\t\t\u0027Precio\u0027 \t\t= pr_precio,\r\n\t\t\u0027Moneda\u0027\t\t= pr_moneda\r\n\t\tfrom"
+			}
+		],
+		"variables": [
+			{
+				"dataType": "int",
+				"name": "@w_error"
+			},
+			{
+				"dataType": "int",
+				"name": "@w_return"
+			},
+			{
+				"dataType": "int",
+				"name": "@w_secuencial"
+			},
+			{
+				"dataType": "varchar",
+				"name": "@w_sp_name"
+			}
+		]
+	}
+}
