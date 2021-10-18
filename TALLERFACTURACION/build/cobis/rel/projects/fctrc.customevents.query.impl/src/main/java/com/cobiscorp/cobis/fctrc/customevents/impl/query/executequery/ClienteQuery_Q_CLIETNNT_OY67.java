@@ -63,11 +63,17 @@ public class ClienteQuery_Q_CLIETNNT_OY67 implements IExecuteQuery {
 			if (logger.isDebugEnabled()) {
 				logger.logDebug("Start executeDataEvent in ClienteQuery_Q_CLIETNNT_OY67");
 			}
+			logger.logDebug("Inicia ejecucion de BLI ECG");
 			bliLeerCliente.execute(arg0);
+			logger.logDebug("Termina ejecucion de BLI ECG");
 		} catch (Exception ex) {
 			DesignerManagerException.handleException(arg1.getMessageManager(), ex, logger);
 		}
-		return null;
+		return arg0.getEntityList("Cliente").getDataList();
+	}
+
+	public static void main(String[] args) {
+					logger.logDebug("Inicia ejecucion de BLI ECG");
 	}
 
 }

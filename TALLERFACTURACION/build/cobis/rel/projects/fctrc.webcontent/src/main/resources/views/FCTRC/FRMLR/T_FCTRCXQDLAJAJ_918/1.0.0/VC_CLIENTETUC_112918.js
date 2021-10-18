@@ -218,6 +218,11 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                     trackId: {
                         type: "string"
                     },
+                    codigo: {
+                        type: "string",
+                        editable: true,
+                        defaultValue: $scope.vc.channelDefaultValues("Cliente", "codigo", '')
+                    },
                     cedula: {
                         type: "string",
                         editable: true,
@@ -246,6 +251,7 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                 }
             });
             $scope.vc.model.Cliente = new kendo.data.DataSource({
+                pageSize: 10,
                 transport: {
                     read: function(options) {
                         var promise = false;
@@ -260,7 +266,7 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                                     queryRequest.updateParameters();
                                     promise = true;
                                     $scope.vc.executeQuery(
-                                        'QV_ZC67_XZK43',
+                                        'QV_RL67_UZN75',
                                     queryRequest,
                                     queryRequest.mainEntityPk.entityId,
                                     true,
@@ -282,8 +288,8 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                                     }, (function() {
                                         var queryOptions = options.data;
                                         var queryView = {
-                                            'allowPaging': false,
-                                            'pageSize': 0
+                                            'allowPaging': true,
+                                            'pageSize': 10
                                         };
 
                                         function config(queryOptions, queryView) {
@@ -328,7 +334,7 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                 aggregate: [],
                 error: function(e) {
                     if (e.xhr.message && e.xhr.message === 'DeletingError') {
-                        $("#QV_ZC67_XZK43").data("kendoExtGrid").cancelChanges();
+                        $("#QV_RL67_UZN75").data("kendoExtGrid").cancelChanges();
                     }
                 }
             });
@@ -338,17 +344,17 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
             $scope.vc.model.Cliente.bind('change', function(e) {
                 $scope.vc.trackers.Cliente.track(e);
             });
-            $scope.vc.grids.QV_ZC67_XZK43 = {};
-            $scope.vc.grids.QV_ZC67_XZK43.queryId = 'Q_CLIETNNT_OY67';
-            $scope.vc.viewState.QV_ZC67_XZK43 = {
+            $scope.vc.grids.QV_RL67_UZN75 = {};
+            $scope.vc.grids.QV_RL67_UZN75.queryId = 'Q_CLIETNNT_OY67';
+            $scope.vc.viewState.QV_RL67_UZN75 = {
                 style: []
             };
-            $scope.vc.viewState.QV_ZC67_XZK43.column = {};
-            $scope.vc.grids.QV_ZC67_XZK43.editable = {
+            $scope.vc.viewState.QV_RL67_UZN75.column = {};
+            $scope.vc.grids.QV_RL67_UZN75.editable = {
                 mode: 'inline',
                 confirmation: false
             };
-            $scope.vc.grids.QV_ZC67_XZK43.events = {
+            $scope.vc.grids.QV_RL67_UZN75.events = {
                 customRowClick: function(e, controlId, entity, idGrid, commandName) {
                     var grid = $scope.vc.getElementGrid(idGrid);
                     var dataItem = grid.dataItem($(e.currentTarget).closest("tr"));
@@ -373,7 +379,7 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                     $scope.vc.trackers.Cliente.cancelTrackedChanges(e.model);
                 },
                 edit: function(e) {
-                    $scope.vc.grids.QV_ZC67_XZK43.selectedRow = e.model;
+                    $scope.vc.grids.QV_RL67_UZN75.selectedRow = e.model;
                     var commandCell = $scope.vc.getCommandCellData(e.container);
                     var titleUpdate = $filter('translate')('DSGNR.SYS_DSGNR_LBLACEPT0_00007');
                     var titleCancel = $filter('translate')('DSGNR.SYS_DSGNR_LBLCANCEL_00006');
@@ -383,17 +389,17 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                 dataBound: function(e) {
                     var index;
                     var grid = e.sender;
-                    $scope.vc.gridDataBound("QV_ZC67_XZK43", false, grid);
-                    $scope.vc.hideShowColumns("QV_ZC67_XZK43", grid);
+                    $scope.vc.gridDataBound("QV_RL67_UZN75", false, grid);
+                    $scope.vc.hideShowColumns("QV_RL67_UZN75", grid);
                     var dataView = null;
                     dataView = this.dataSource.view();
                     var styleName, iStyle;
                     for (var i = 0; i < dataView.length; i++) {
-                        if (typeof $scope.vc.viewState.QV_ZC67_XZK43.rows[dataView[i].uid] != "undefined") {
-                            for (iStyle = 0; iStyle < $scope.vc.viewState.QV_ZC67_XZK43.rows[dataView[i].uid].style.length; iStyle++) {
-                                styleName = $scope.vc.viewState.QV_ZC67_XZK43.rows[dataView[i].uid].style[iStyle];
-                                if ($("#QV_ZC67_XZK43 tbody").find("tr[data-uid=" + dataView[i].uid + "]").hasClass(styleName) === false) {
-                                    $("#QV_ZC67_XZK43 tbody").find("tr[data-uid=" + dataView[i].uid + "]").addClass(styleName);
+                        if (typeof $scope.vc.viewState.QV_RL67_UZN75.rows[dataView[i].uid] != "undefined") {
+                            for (iStyle = 0; iStyle < $scope.vc.viewState.QV_RL67_UZN75.rows[dataView[i].uid].style.length; iStyle++) {
+                                styleName = $scope.vc.viewState.QV_RL67_UZN75.rows[dataView[i].uid].style[iStyle];
+                                if ($("#QV_RL67_UZN75 tbody").find("tr[data-uid=" + dataView[i].uid + "]").hasClass(styleName) === false) {
+                                    $("#QV_RL67_UZN75 tbody").find("tr[data-uid=" + dataView[i].uid + "]").addClass(styleName);
                                 }
                             }
                         }
@@ -401,11 +407,42 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                 }
             };
             //Comandos de registros del Grid
-            $scope.vc.grids.QV_ZC67_XZK43.columns = [];
+            $scope.vc.grids.QV_RL67_UZN75.columns = [];
             //Registros de fila del Grid
-            $scope.vc.viewState.QV_ZC67_XZK43.rows = [];
+            $scope.vc.viewState.QV_RL67_UZN75.rows = [];
             //Controles de edicion en linea del Grid
-            $scope.vc.viewState.QV_ZC67_XZK43.column.cedula = {
+            $scope.vc.viewState.QV_RL67_UZN75.column.codigo = {
+                title: 'codigo',
+                titleArgs: {},
+                tooltip: '',
+                enabled: designer.enums.hasFlag(designer.constants.mode.All, $scope.vc.mode),
+                hidden: !designer.enums.hasFlag(designer.constants.mode.All, $scope.vc.mode),
+                readOnly: designer.enums.hasFlag(designer.constants.mode.Query, $scope.vc.mode),
+                decimals: 0,
+                style: [],
+                validationCode: 0,
+                componentId: 'VA_TEXTINPUTBOXDEC_651833',
+                element: []
+            };
+            $scope.vc.grids.QV_RL67_UZN75.AT25_CODIGOUO385 = {
+                control: function(container, options) {
+                    var textInput = $('<input/>', {
+                        'name': options.field,
+                        'data-bind': "value:" + options.field,
+                        'ng-disabled': "!vc.viewState.QV_RL67_UZN75.column.codigo.enabled",
+                        'ng-readonly': "designer.enums.hasFlag(designer.constants.mode.Query,vc.mode)",
+                        'ng-show': "designer.enums.hasFlag(designer.constants.mode.All,vc.mode)",
+                        'id': "VA_TEXTINPUTBOXDEC_651833",
+                        'data-validation-code': "{{vc.viewState.QV_RL67_UZN75.column.codigo.validationCode}}",
+                        'type': "text",
+                        'class': "k-textbox",
+                        'ng-model-onblur': "",
+                        'ng-class': "vc.viewState.QV_RL67_UZN75.column.codigo.style"
+                    });
+                    textInput.appendTo(container);
+                }
+            };
+            $scope.vc.viewState.QV_RL67_UZN75.column.cedula = {
                 title: 'cedula',
                 titleArgs: {},
                 tooltip: '',
@@ -415,28 +452,28 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                 decimals: 0,
                 style: [],
                 validationCode: 0,
-                componentId: 'VA_TEXTINPUTBOXYLJ_405833',
+                componentId: 'VA_TEXTINPUTBOXZFX_314833',
                 element: []
             };
-            $scope.vc.grids.QV_ZC67_XZK43.AT81_CEDULAYR385 = {
+            $scope.vc.grids.QV_RL67_UZN75.AT81_CEDULAYR385 = {
                 control: function(container, options) {
                     var textInput = $('<input/>', {
                         'name': options.field,
                         'data-bind': "value:" + options.field,
-                        'ng-disabled': "!vc.viewState.QV_ZC67_XZK43.column.cedula.enabled",
+                        'ng-disabled': "!vc.viewState.QV_RL67_UZN75.column.cedula.enabled",
                         'ng-readonly': "designer.enums.hasFlag(designer.constants.mode.Query,vc.mode)",
                         'ng-show': "designer.enums.hasFlag(designer.constants.mode.All,vc.mode)",
-                        'id': "VA_TEXTINPUTBOXYLJ_405833",
-                        'data-validation-code': "{{vc.viewState.QV_ZC67_XZK43.column.cedula.validationCode}}",
+                        'id': "VA_TEXTINPUTBOXZFX_314833",
+                        'data-validation-code': "{{vc.viewState.QV_RL67_UZN75.column.cedula.validationCode}}",
                         'type': "text",
                         'class': "k-textbox",
                         'ng-model-onblur': "",
-                        'ng-class': "vc.viewState.QV_ZC67_XZK43.column.cedula.style"
+                        'ng-class': "vc.viewState.QV_RL67_UZN75.column.cedula.style"
                     });
                     textInput.appendTo(container);
                 }
             };
-            $scope.vc.viewState.QV_ZC67_XZK43.column.nombre = {
+            $scope.vc.viewState.QV_RL67_UZN75.column.nombre = {
                 title: 'nombre',
                 titleArgs: {},
                 tooltip: '',
@@ -446,28 +483,28 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                 decimals: 0,
                 style: [],
                 validationCode: 0,
-                componentId: 'VA_TEXTINPUTBOXFQG_754833',
+                componentId: 'VA_TEXTINPUTBOXIOS_133833',
                 element: []
             };
-            $scope.vc.grids.QV_ZC67_XZK43.AT40_NOMBREUB385 = {
+            $scope.vc.grids.QV_RL67_UZN75.AT40_NOMBREUB385 = {
                 control: function(container, options) {
                     var textInput = $('<input/>', {
                         'name': options.field,
                         'data-bind': "value:" + options.field,
-                        'ng-disabled': "!vc.viewState.QV_ZC67_XZK43.column.nombre.enabled",
+                        'ng-disabled': "!vc.viewState.QV_RL67_UZN75.column.nombre.enabled",
                         'ng-readonly': "designer.enums.hasFlag(designer.constants.mode.Query,vc.mode)",
                         'ng-show': "designer.enums.hasFlag(designer.constants.mode.All,vc.mode)",
-                        'id': "VA_TEXTINPUTBOXFQG_754833",
-                        'data-validation-code': "{{vc.viewState.QV_ZC67_XZK43.column.nombre.validationCode}}",
+                        'id': "VA_TEXTINPUTBOXIOS_133833",
+                        'data-validation-code': "{{vc.viewState.QV_RL67_UZN75.column.nombre.validationCode}}",
                         'type': "text",
                         'class': "k-textbox",
                         'ng-model-onblur': "",
-                        'ng-class': "vc.viewState.QV_ZC67_XZK43.column.nombre.style"
+                        'ng-class': "vc.viewState.QV_RL67_UZN75.column.nombre.style"
                     });
                     textInput.appendTo(container);
                 }
             };
-            $scope.vc.viewState.QV_ZC67_XZK43.column.apellido = {
+            $scope.vc.viewState.QV_RL67_UZN75.column.apellido = {
                 title: 'apellido',
                 titleArgs: {},
                 tooltip: '',
@@ -477,28 +514,28 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                 decimals: 0,
                 style: [],
                 validationCode: 0,
-                componentId: 'VA_TEXTINPUTBOXIXU_720833',
+                componentId: 'VA_TEXTINPUTBOXNEY_169833',
                 element: []
             };
-            $scope.vc.grids.QV_ZC67_XZK43.AT81_APELLIDO385 = {
+            $scope.vc.grids.QV_RL67_UZN75.AT81_APELLIDO385 = {
                 control: function(container, options) {
                     var textInput = $('<input/>', {
                         'name': options.field,
                         'data-bind': "value:" + options.field,
-                        'ng-disabled': "!vc.viewState.QV_ZC67_XZK43.column.apellido.enabled",
+                        'ng-disabled': "!vc.viewState.QV_RL67_UZN75.column.apellido.enabled",
                         'ng-readonly': "designer.enums.hasFlag(designer.constants.mode.Query,vc.mode)",
                         'ng-show': "designer.enums.hasFlag(designer.constants.mode.All,vc.mode)",
-                        'id': "VA_TEXTINPUTBOXIXU_720833",
-                        'data-validation-code': "{{vc.viewState.QV_ZC67_XZK43.column.apellido.validationCode}}",
+                        'id': "VA_TEXTINPUTBOXNEY_169833",
+                        'data-validation-code': "{{vc.viewState.QV_RL67_UZN75.column.apellido.validationCode}}",
                         'type': "text",
                         'class': "k-textbox",
                         'ng-model-onblur': "",
-                        'ng-class': "vc.viewState.QV_ZC67_XZK43.column.apellido.style"
+                        'ng-class': "vc.viewState.QV_RL67_UZN75.column.apellido.style"
                     });
                     textInput.appendTo(container);
                 }
             };
-            $scope.vc.viewState.QV_ZC67_XZK43.column.direccion = {
+            $scope.vc.viewState.QV_RL67_UZN75.column.direccion = {
                 title: 'direccion',
                 titleArgs: {},
                 tooltip: '',
@@ -508,28 +545,28 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                 decimals: 0,
                 style: [],
                 validationCode: 0,
-                componentId: 'VA_TEXTINPUTBOXVOY_514833',
+                componentId: 'VA_TEXTINPUTBOXASC_371833',
                 element: []
             };
-            $scope.vc.grids.QV_ZC67_XZK43.AT72_DIRECCIO385 = {
+            $scope.vc.grids.QV_RL67_UZN75.AT72_DIRECCIO385 = {
                 control: function(container, options) {
                     var textInput = $('<input/>', {
                         'name': options.field,
                         'data-bind': "value:" + options.field,
-                        'ng-disabled': "!vc.viewState.QV_ZC67_XZK43.column.direccion.enabled",
+                        'ng-disabled': "!vc.viewState.QV_RL67_UZN75.column.direccion.enabled",
                         'ng-readonly': "designer.enums.hasFlag(designer.constants.mode.Query,vc.mode)",
                         'ng-show': "designer.enums.hasFlag(designer.constants.mode.All,vc.mode)",
-                        'id': "VA_TEXTINPUTBOXVOY_514833",
-                        'data-validation-code': "{{vc.viewState.QV_ZC67_XZK43.column.direccion.validationCode}}",
+                        'id': "VA_TEXTINPUTBOXASC_371833",
+                        'data-validation-code': "{{vc.viewState.QV_RL67_UZN75.column.direccion.validationCode}}",
                         'type': "text",
                         'class': "k-textbox",
                         'ng-model-onblur': "",
-                        'ng-class': "vc.viewState.QV_ZC67_XZK43.column.direccion.style"
+                        'ng-class': "vc.viewState.QV_RL67_UZN75.column.direccion.style"
                     });
                     textInput.appendTo(container);
                 }
             };
-            $scope.vc.viewState.QV_ZC67_XZK43.column.telefono = {
+            $scope.vc.viewState.QV_RL67_UZN75.column.telefono = {
                 title: 'telefono',
                 titleArgs: {},
                 tooltip: '',
@@ -539,145 +576,161 @@ function VC_CLIENTETUC_112918(cobisMainModule) {
                 decimals: 0,
                 style: [],
                 validationCode: 0,
-                componentId: 'VA_TEXTINPUTBOXPRP_610833',
+                componentId: 'VA_TEXTINPUTBOXAYH_697833',
                 element: []
             };
-            $scope.vc.grids.QV_ZC67_XZK43.AT56_TELEFONN385 = {
+            $scope.vc.grids.QV_RL67_UZN75.AT56_TELEFONN385 = {
                 control: function(container, options) {
                     var textInput = $('<input/>', {
                         'name': options.field,
                         'data-bind': "value:" + options.field,
-                        'ng-disabled': "!vc.viewState.QV_ZC67_XZK43.column.telefono.enabled",
+                        'ng-disabled': "!vc.viewState.QV_RL67_UZN75.column.telefono.enabled",
                         'ng-readonly': "designer.enums.hasFlag(designer.constants.mode.Query,vc.mode)",
                         'ng-show': "designer.enums.hasFlag(designer.constants.mode.All,vc.mode)",
-                        'id': "VA_TEXTINPUTBOXPRP_610833",
-                        'data-validation-code': "{{vc.viewState.QV_ZC67_XZK43.column.telefono.validationCode}}",
+                        'id': "VA_TEXTINPUTBOXAYH_697833",
+                        'data-validation-code': "{{vc.viewState.QV_RL67_UZN75.column.telefono.validationCode}}",
                         'type': "text",
                         'class': "k-textbox",
                         'ng-model-onblur': "",
-                        'ng-class': "vc.viewState.QV_ZC67_XZK43.column.telefono.style"
+                        'ng-class': "vc.viewState.QV_RL67_UZN75.column.telefono.style"
                     });
                     textInput.appendTo(container);
                 }
             };
             //Creacion de columnas del Grid
             if (designer.enums.hasFlag(designer.constants.mode.All, $scope.vc.mode)) {
-                $scope.vc.grids.QV_ZC67_XZK43.columns.push({
+                $scope.vc.grids.QV_RL67_UZN75.columns.push({
+                    field: 'codigo',
+                    title: '{{vc.viewState.QV_RL67_UZN75.column.codigo.title|translate:vc.viewState.QV_RL67_UZN75.column.codigo.titleArgs}}',
+                    width: $scope.vc.viewState.QV_RL67_UZN75.column.codigo.width,
+                    format: $scope.vc.viewState.QV_RL67_UZN75.column.codigo.format,
+                    editor: $scope.vc.grids.QV_RL67_UZN75.AT25_CODIGOUO385.control,
+                    template: "<span ng-class='vc.viewState.QV_RL67_UZN75.column.codigo.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.codigo, \"QV_RL67_UZN75\", \"codigo\")'></span>",
+                    attributes: {
+                        "class": "",
+                        "ng-class": "vc.viewState.QV_RL67_UZN75.column.codigo.style",
+                        "title": "{{vc.viewState.QV_RL67_UZN75.column.codigo.tooltip|translate}}"
+                    },
+                    hidden: $scope.vc.viewState.QV_RL67_UZN75.column.codigo.hidden
+                });
+            }
+            if (designer.enums.hasFlag(designer.constants.mode.All, $scope.vc.mode)) {
+                $scope.vc.grids.QV_RL67_UZN75.columns.push({
                     field: 'cedula',
-                    title: '{{vc.viewState.QV_ZC67_XZK43.column.cedula.title|translate:vc.viewState.QV_ZC67_XZK43.column.cedula.titleArgs}}',
-                    width: $scope.vc.viewState.QV_ZC67_XZK43.column.cedula.width,
-                    format: $scope.vc.viewState.QV_ZC67_XZK43.column.cedula.format,
-                    editor: $scope.vc.grids.QV_ZC67_XZK43.AT81_CEDULAYR385.control,
-                    template: "<span ng-class='vc.viewState.QV_ZC67_XZK43.column.cedula.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.cedula, \"QV_ZC67_XZK43\", \"cedula\")'></span>",
+                    title: '{{vc.viewState.QV_RL67_UZN75.column.cedula.title|translate:vc.viewState.QV_RL67_UZN75.column.cedula.titleArgs}}',
+                    width: $scope.vc.viewState.QV_RL67_UZN75.column.cedula.width,
+                    format: $scope.vc.viewState.QV_RL67_UZN75.column.cedula.format,
+                    editor: $scope.vc.grids.QV_RL67_UZN75.AT81_CEDULAYR385.control,
+                    template: "<span ng-class='vc.viewState.QV_RL67_UZN75.column.cedula.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.cedula, \"QV_RL67_UZN75\", \"cedula\")'></span>",
                     attributes: {
                         "class": "",
-                        "ng-class": "vc.viewState.QV_ZC67_XZK43.column.cedula.style",
-                        "title": "{{vc.viewState.QV_ZC67_XZK43.column.cedula.tooltip|translate}}"
+                        "ng-class": "vc.viewState.QV_RL67_UZN75.column.cedula.style",
+                        "title": "{{vc.viewState.QV_RL67_UZN75.column.cedula.tooltip|translate}}"
                     },
-                    hidden: $scope.vc.viewState.QV_ZC67_XZK43.column.cedula.hidden
+                    hidden: $scope.vc.viewState.QV_RL67_UZN75.column.cedula.hidden
                 });
             }
             if (designer.enums.hasFlag(designer.constants.mode.All, $scope.vc.mode)) {
-                $scope.vc.grids.QV_ZC67_XZK43.columns.push({
+                $scope.vc.grids.QV_RL67_UZN75.columns.push({
                     field: 'nombre',
-                    title: '{{vc.viewState.QV_ZC67_XZK43.column.nombre.title|translate:vc.viewState.QV_ZC67_XZK43.column.nombre.titleArgs}}',
-                    width: $scope.vc.viewState.QV_ZC67_XZK43.column.nombre.width,
-                    format: $scope.vc.viewState.QV_ZC67_XZK43.column.nombre.format,
-                    editor: $scope.vc.grids.QV_ZC67_XZK43.AT40_NOMBREUB385.control,
-                    template: "<span ng-class='vc.viewState.QV_ZC67_XZK43.column.nombre.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.nombre, \"QV_ZC67_XZK43\", \"nombre\")'></span>",
+                    title: '{{vc.viewState.QV_RL67_UZN75.column.nombre.title|translate:vc.viewState.QV_RL67_UZN75.column.nombre.titleArgs}}',
+                    width: $scope.vc.viewState.QV_RL67_UZN75.column.nombre.width,
+                    format: $scope.vc.viewState.QV_RL67_UZN75.column.nombre.format,
+                    editor: $scope.vc.grids.QV_RL67_UZN75.AT40_NOMBREUB385.control,
+                    template: "<span ng-class='vc.viewState.QV_RL67_UZN75.column.nombre.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.nombre, \"QV_RL67_UZN75\", \"nombre\")'></span>",
                     attributes: {
                         "class": "",
-                        "ng-class": "vc.viewState.QV_ZC67_XZK43.column.nombre.style",
-                        "title": "{{vc.viewState.QV_ZC67_XZK43.column.nombre.tooltip|translate}}"
+                        "ng-class": "vc.viewState.QV_RL67_UZN75.column.nombre.style",
+                        "title": "{{vc.viewState.QV_RL67_UZN75.column.nombre.tooltip|translate}}"
                     },
-                    hidden: $scope.vc.viewState.QV_ZC67_XZK43.column.nombre.hidden
+                    hidden: $scope.vc.viewState.QV_RL67_UZN75.column.nombre.hidden
                 });
             }
             if (designer.enums.hasFlag(designer.constants.mode.All, $scope.vc.mode)) {
-                $scope.vc.grids.QV_ZC67_XZK43.columns.push({
+                $scope.vc.grids.QV_RL67_UZN75.columns.push({
                     field: 'apellido',
-                    title: '{{vc.viewState.QV_ZC67_XZK43.column.apellido.title|translate:vc.viewState.QV_ZC67_XZK43.column.apellido.titleArgs}}',
-                    width: $scope.vc.viewState.QV_ZC67_XZK43.column.apellido.width,
-                    format: $scope.vc.viewState.QV_ZC67_XZK43.column.apellido.format,
-                    editor: $scope.vc.grids.QV_ZC67_XZK43.AT81_APELLIDO385.control,
-                    template: "<span ng-class='vc.viewState.QV_ZC67_XZK43.column.apellido.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.apellido, \"QV_ZC67_XZK43\", \"apellido\")'></span>",
+                    title: '{{vc.viewState.QV_RL67_UZN75.column.apellido.title|translate:vc.viewState.QV_RL67_UZN75.column.apellido.titleArgs}}',
+                    width: $scope.vc.viewState.QV_RL67_UZN75.column.apellido.width,
+                    format: $scope.vc.viewState.QV_RL67_UZN75.column.apellido.format,
+                    editor: $scope.vc.grids.QV_RL67_UZN75.AT81_APELLIDO385.control,
+                    template: "<span ng-class='vc.viewState.QV_RL67_UZN75.column.apellido.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.apellido, \"QV_RL67_UZN75\", \"apellido\")'></span>",
                     attributes: {
                         "class": "",
-                        "ng-class": "vc.viewState.QV_ZC67_XZK43.column.apellido.style",
-                        "title": "{{vc.viewState.QV_ZC67_XZK43.column.apellido.tooltip|translate}}"
+                        "ng-class": "vc.viewState.QV_RL67_UZN75.column.apellido.style",
+                        "title": "{{vc.viewState.QV_RL67_UZN75.column.apellido.tooltip|translate}}"
                     },
-                    hidden: $scope.vc.viewState.QV_ZC67_XZK43.column.apellido.hidden
+                    hidden: $scope.vc.viewState.QV_RL67_UZN75.column.apellido.hidden
                 });
             }
             if (designer.enums.hasFlag(designer.constants.mode.All, $scope.vc.mode)) {
-                $scope.vc.grids.QV_ZC67_XZK43.columns.push({
+                $scope.vc.grids.QV_RL67_UZN75.columns.push({
                     field: 'direccion',
-                    title: '{{vc.viewState.QV_ZC67_XZK43.column.direccion.title|translate:vc.viewState.QV_ZC67_XZK43.column.direccion.titleArgs}}',
-                    width: $scope.vc.viewState.QV_ZC67_XZK43.column.direccion.width,
-                    format: $scope.vc.viewState.QV_ZC67_XZK43.column.direccion.format,
-                    editor: $scope.vc.grids.QV_ZC67_XZK43.AT72_DIRECCIO385.control,
-                    template: "<span ng-class='vc.viewState.QV_ZC67_XZK43.column.direccion.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.direccion, \"QV_ZC67_XZK43\", \"direccion\")'></span>",
+                    title: '{{vc.viewState.QV_RL67_UZN75.column.direccion.title|translate:vc.viewState.QV_RL67_UZN75.column.direccion.titleArgs}}',
+                    width: $scope.vc.viewState.QV_RL67_UZN75.column.direccion.width,
+                    format: $scope.vc.viewState.QV_RL67_UZN75.column.direccion.format,
+                    editor: $scope.vc.grids.QV_RL67_UZN75.AT72_DIRECCIO385.control,
+                    template: "<span ng-class='vc.viewState.QV_RL67_UZN75.column.direccion.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.direccion, \"QV_RL67_UZN75\", \"direccion\")'></span>",
                     attributes: {
                         "class": "",
-                        "ng-class": "vc.viewState.QV_ZC67_XZK43.column.direccion.style",
-                        "title": "{{vc.viewState.QV_ZC67_XZK43.column.direccion.tooltip|translate}}"
+                        "ng-class": "vc.viewState.QV_RL67_UZN75.column.direccion.style",
+                        "title": "{{vc.viewState.QV_RL67_UZN75.column.direccion.tooltip|translate}}"
                     },
-                    hidden: $scope.vc.viewState.QV_ZC67_XZK43.column.direccion.hidden
+                    hidden: $scope.vc.viewState.QV_RL67_UZN75.column.direccion.hidden
                 });
             }
             if (designer.enums.hasFlag(designer.constants.mode.All, $scope.vc.mode)) {
-                $scope.vc.grids.QV_ZC67_XZK43.columns.push({
+                $scope.vc.grids.QV_RL67_UZN75.columns.push({
                     field: 'telefono',
-                    title: '{{vc.viewState.QV_ZC67_XZK43.column.telefono.title|translate:vc.viewState.QV_ZC67_XZK43.column.telefono.titleArgs}}',
-                    width: $scope.vc.viewState.QV_ZC67_XZK43.column.telefono.width,
-                    format: $scope.vc.viewState.QV_ZC67_XZK43.column.telefono.format,
-                    editor: $scope.vc.grids.QV_ZC67_XZK43.AT56_TELEFONN385.control,
-                    template: "<span ng-class='vc.viewState.QV_ZC67_XZK43.column.telefono.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.telefono, \"QV_ZC67_XZK43\", \"telefono\")'></span>",
+                    title: '{{vc.viewState.QV_RL67_UZN75.column.telefono.title|translate:vc.viewState.QV_RL67_UZN75.column.telefono.titleArgs}}',
+                    width: $scope.vc.viewState.QV_RL67_UZN75.column.telefono.width,
+                    format: $scope.vc.viewState.QV_RL67_UZN75.column.telefono.format,
+                    editor: $scope.vc.grids.QV_RL67_UZN75.AT56_TELEFONN385.control,
+                    template: "<span ng-class='vc.viewState.QV_RL67_UZN75.column.telefono.element[dataItem.dsgnrId].style' ng-bind='vc.getStringColumnFormat(dataItem.telefono, \"QV_RL67_UZN75\", \"telefono\")'></span>",
                     attributes: {
                         "class": "",
-                        "ng-class": "vc.viewState.QV_ZC67_XZK43.column.telefono.style",
-                        "title": "{{vc.viewState.QV_ZC67_XZK43.column.telefono.tooltip|translate}}"
+                        "ng-class": "vc.viewState.QV_RL67_UZN75.column.telefono.style",
+                        "title": "{{vc.viewState.QV_RL67_UZN75.column.telefono.tooltip|translate}}"
                     },
-                    hidden: $scope.vc.viewState.QV_ZC67_XZK43.column.telefono.hidden
+                    hidden: $scope.vc.viewState.QV_RL67_UZN75.column.telefono.hidden
                 });
             }
-            $scope.vc.viewState.QV_ZC67_XZK43.column.edit = {
+            $scope.vc.viewState.QV_RL67_UZN75.column.edit = {
                 element: []
             };
-            $scope.vc.viewState.QV_ZC67_XZK43.column["delete"] = {
+            $scope.vc.viewState.QV_RL67_UZN75.column["delete"] = {
                 element: []
             };
-            $scope.vc.viewState.QV_ZC67_XZK43.column.cmdEdition = {};
-            $scope.vc.viewState.QV_ZC67_XZK43.column.cmdEdition.hidden = (!designer.enums.hasFlag(designer.constants.mode.Query, $scope.vc.mode)) ? false : true;
-            $scope.vc.grids.QV_ZC67_XZK43.columns.push({
+            $scope.vc.viewState.QV_RL67_UZN75.column.cmdEdition = {};
+            $scope.vc.viewState.QV_RL67_UZN75.column.cmdEdition.hidden = (!designer.enums.hasFlag(designer.constants.mode.Query, $scope.vc.mode)) ? false : true;
+            $scope.vc.grids.QV_RL67_UZN75.columns.push({
                 field: 'cmdEdition',
                 title: ' ',
                 command: [{
                     name: "edit",
                     text: "{{'DSGNR.SYS_DSGNR_LBLEDIT00_00005'|translate}}",
                     cssMap: "{'btn': true, 'btn-default': true, 'cb-row-image-button': true" + ", 'k-grid-edit': !vc.viewState.G_CLIENTEKDO_255833.disabled}",
-                    template: "<a ng-class='vc.getCssClass(\"edit\", " + "vc.viewState.QV_ZC67_XZK43.column.edit.element[dataItem.uid].style, #:cssMap#, vc.viewState.QV_ZC67_XZK43.column.edit.element[dataItem.dsgnrId].style)' " + "title=\"{{'DSGNR.SYS_DSGNR_LBLEDIT00_00005'|translate}}\" " + "ng-disabled = (vc.viewState.G_CLIENTEKDO_255833.disabled==true?true:false) " + "href='\\#'>" + "<span class='fa fa-pencil'></span>" + "</a>"
+                    template: "<a ng-class='vc.getCssClass(\"edit\", " + "vc.viewState.QV_RL67_UZN75.column.edit.element[dataItem.uid].style, #:cssMap#, vc.viewState.QV_RL67_UZN75.column.edit.element[dataItem.dsgnrId].style)' " + "title=\"{{'DSGNR.SYS_DSGNR_LBLEDIT00_00005'|translate}}\" " + "ng-disabled = (vc.viewState.G_CLIENTEKDO_255833.disabled==true?true:false) " + "href='\\#'>" + "<span class='fa fa-pencil'></span>" + "</a>"
                 }, {
                     name: "destroy",
                     text: "{{'DSGNR.SYS_DSGNR_LBLDELETE_00008'|translate}}",
                     cssMap: "{'btn': true, 'btn-default': true, 'cb-row-image-button': true" + ", 'k-grid-delete': !vc.viewState.G_CLIENTEKDO_255833.disabled}",
-                    template: "<a ng-class='vc.getCssClass(\"destroy\", " + "vc.viewState.QV_ZC67_XZK43.column.delete.element[dataItem.uid].style, #:cssMap#, vc.viewState.QV_ZC67_XZK43.column.delete.element[dataItem.dsgnrId].style)' " + "title=\"{{'DSGNR.SYS_DSGNR_LBLDELETE_00008'|translate}}\" " + "ng-disabled = (vc.viewState.G_CLIENTEKDO_255833.disabled==true?true:false) " + ">" + "<span class='fa fa-times'></span>" + "</a>"
+                    template: "<a ng-class='vc.getCssClass(\"destroy\", " + "vc.viewState.QV_RL67_UZN75.column.delete.element[dataItem.uid].style, #:cssMap#, vc.viewState.QV_RL67_UZN75.column.delete.element[dataItem.dsgnrId].style)' " + "title=\"{{'DSGNR.SYS_DSGNR_LBLDELETE_00008'|translate}}\" " + "ng-disabled = (vc.viewState.G_CLIENTEKDO_255833.disabled==true?true:false) " + ">" + "<span class='fa fa-times'></span>" + "</a>"
                 }],
                 attributes: {
                     "class": "btn-toolbar"
                 },
-                hidden: designer.enums.hasFlag(designer.constants.mode.Query, $scope.vc.mode) === true ? true : $scope.vc.viewState.QV_ZC67_XZK43.column.cmdEdition.hidden,
+                hidden: designer.enums.hasFlag(designer.constants.mode.Query, $scope.vc.mode) === true ? true : $scope.vc.viewState.QV_RL67_UZN75.column.cmdEdition.hidden,
                 width: Number(sessionStorage.columnSize) || 100
             });
-            $scope.vc.viewState.QV_ZC67_XZK43.toolbar = {
+            $scope.vc.viewState.QV_RL67_UZN75.toolbar = {
                 create: {
                     visible: !designer.enums.hasFlag(designer.constants.mode.Query, $scope.vc.mode)
                 }
             }
-            $scope.vc.grids.QV_ZC67_XZK43.toolbar = [{
+            $scope.vc.grids.QV_RL67_UZN75.toolbar = [{
                 "name": "create",
                 "text": "",
-                "template": "<button class = 'btn btn-default k-grid-add cb-grid-button' " + "ng-if = 'vc.viewState.QV_ZC67_XZK43.toolbar.create.visible' " + "ng-disabled = 'vc.viewState.G_CLIENTEKDO_255833.disabled?true:false'" + "title = \"{{'DSGNR.SYS_DSGNR_LBLNEW000_00013'|translate}}\" >" + "<span class='fa fa-plus'></span>{{'DSGNR.SYS_DSGNR_LBLNEW000_00013'|translate}}</button>"
+                "template": "<button class = 'btn btn-default k-grid-add cb-grid-button' " + "ng-if = 'vc.viewState.QV_RL67_UZN75.toolbar.create.visible' " + "ng-disabled = 'vc.viewState.G_CLIENTEKDO_255833.disabled?true:false'" + "title = \"{{'DSGNR.SYS_DSGNR_LBLNEW000_00013'|translate}}\" >" + "<span class='fa fa-plus'></span>{{'DSGNR.SYS_DSGNR_LBLNEW000_00013'|translate}}</button>"
             }];
             //ViewState - Command: Accept
             $scope.vc.createViewState({

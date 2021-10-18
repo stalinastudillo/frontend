@@ -112,7 +112,7 @@
 					"{4}",
 					"{5}"
 				],
-				"editMode": true,
+				"editMode": false,
 				"queryText": "SELECT\r\n\t\t\tcl_codigo,\r\n\t\t\tcl_cedula,\r\n\t\t\tcl_nombre,\r\n\t\t\tcl_apellido,\r\n\t\t\tcl_direccion,\r\n\t\t\tcl_telefono\r\n\tFROM"
 			}
 		],

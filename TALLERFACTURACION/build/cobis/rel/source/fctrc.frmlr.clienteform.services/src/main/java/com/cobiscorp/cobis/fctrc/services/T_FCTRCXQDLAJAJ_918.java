@@ -1,6 +1,6 @@
 /*
  * Archivo: T_FCTRCXQDLAJAJ_918.java
- * Fecha: 2021-10-17T21:50:08Z
+ * Fecha: 2021-10-18T06:01:23Z
  *
  * Esta aplicacion es parte de los paquetes bancarios propiedad de COBISCORP.
  * Su uso no autorizado queda expresamente prohibido asi como cualquier
@@ -60,13 +60,13 @@ import com.cobiscorp.designer.api.managers.EventManager;
 	cardinality = ReferenceCardinality.OPTIONAL_MULTIPLE, 
 	policy=ReferencePolicy.DYNAMIC,
 	target="(&(view.id=VW_CLIENTEHYV_833)(view.version=1.0.0))")
-,@Reference (name="QV_ZC67_XZK43",
+,@Reference (name="QV_RL67_UZN75",
 	referenceInterface=QueryViewEventBuilder.class,
 	bind="addQueyViewEventBuilder",
 	unbind="removeQueyViewEventBuilder",
 	cardinality = ReferenceCardinality.OPTIONAL_MULTIPLE, 
 	policy=ReferencePolicy.DYNAMIC,
-	target="(queryView.id=QV_ZC67_XZK43)")
+	target="(queryView.id=QV_RL67_UZN75)")
 ,@Reference(name="Q_CLIETNNT_OY67",
     referenceInterface = QueryEventBuilder.class,
     bind = "addQueryEventBuilder", 

@@ -13,6 +13,7 @@
 			],
 			"entities": {
 				"EN_CLIENTETX_385": [
+					"AT25_CODIGOUO385",
 					"AT40_NOMBREUB385",
 					"AT56_TELEFONN385",
 					"AT72_DIRECCIO385",
@@ -34,6 +35,7 @@
 					"QM_CLIET7TN6T366_04",
 					"QM_CLIET7TYNT189_05",
 					"QM_CLIETNOT77175_01",
+					"QM_CLIETYNNNT759_01",
 					"QM_CLIETYT6N6637_03"
 				]
 			},

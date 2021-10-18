@@ -53,6 +53,7 @@ public class BLI4116_bli_obtener_clientes implements IBLIExecutor {
       mapper = MapperManager.get(Mapper.class);
       mapper.addInputParameter("@t_trn", SqlType.INT, "163030126");
       mapper.addInputParameter("@i_operacion", SqlType.CHAR, "R");
+      mapper.addOutputParameter("@o_codigo", SqlType.INT, "0");
       ExecutorSP executorSP = new ExecutorSP(mapper);
       MapperResult mapperSp1 = new MapperResult();
       mapperSp1.addMapper(Cliente.CODIGO, 1);
